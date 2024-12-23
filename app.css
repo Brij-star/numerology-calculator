@@ -34,7 +34,7 @@
         }
 
         .link {
-            color: #000000;
+            color: var(--secondary-color);
         }
 
         /* Main Container */
