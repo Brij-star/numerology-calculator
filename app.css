@@ -34,7 +34,7 @@
         }
 
         .link {
-            color: var(--secondary-color);
+            font-weight: bold;
         }
 
         /* Main Container */
