@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numerology Calculator - Free Name & Birth Date Analysis</title>
+    <meta name="description" content="Calculate your numerology numbers instantly. Get free analysis of your name and birth date. Discover your Life Path Number, Destiny Number, and more.">
+    <meta name="keywords" content="numerology calculator, life path number, destiny number, birth date numerology, name numerology">
+        
+</head>
+<body>
+    <header>
+        <h1>Numerology Calculator</h1>
+        <p>Discover Your Life Path Number & Destiny Number by <a href="https://numerologychecker.com/" class="link">Numerology Checker</a></p>
+    </header>
+
+    <div class="container">
+        <section id="calculator" class="calculator-section">
+            <div class="calculator-header">
+                <h1>Free Numerology Calculator</h1>
+                <p>Discover the hidden meaning behind your name and birth date</p>
+            </div>
+            <form id="numerologyForm" onsubmit="calculateNumbers(event)">
+                <div class="form-group">
+                    <label for="name">Full Name (as per birth certificate):</label>
+                    <input type="text" id="name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="birthdate">Date of Birth:</label>
+                    <input type="date" id="birthdate" required>
+                </div>
+                <button type="submit" class="calculate-btn">Calculate Your Numbers</button>
+            </form>
+        </section>
+
+        <section id="results" class="result-section">
+            <h2>Your Numerology Numbers</h2>
+            <div id="lifePathResult" class="number-card"></div>
+            <div id="destinyResult" class="number-card"></div>
+            <div id="soulUrgeResult" class="number-card"></div>
+        </section>
+
+        <section id="about" class="content-section">
+            <h2>About Numerology</h2>
+            <p>Numerology is an ancient mystical science that reveals the hidden meanings behind numbers. It helps us understand our life purpose, talents, and potential challenges through the analysis of our birth date and name.</p>
+            <p>This calculator uses traditional numerology methods to determine your core numbers, including your Life Path Number, Destiny Number, and Soul Urge Number.</p>
+        </section>
+
+        <section id="numbers" class="content-section">
+            <h2>Understanding Your Numbers</h2>
+            <div class="number-grid">
+                <div class="number-info">
+                    <h3>Life Path Number</h3>
+                    <p>Calculated from your birth date, this number reveals your life's purpose and the path you're destined to follow.</p>
+                </div>
+                <div class="number-info">
+                    <h3>Destiny Number</h3>
+                    <p>Derived from your full name, this number indicates your natural talents and the goals you're meant to achieve.</p>
+                </div>
+                <div class="number-info">
+                    <h3>Soul Urge Number</h3>
+                    <p>Based on the vowels in your name, this number reveals your inner desires and what truly motivates you.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="learn" class="content-section">
+            <h2>Learn More About Numerology</h2>
+            <p>Each number in numerology carries unique vibrations and meanings:</p>
+            <div class="number-grid">
+                <div class="number-info">
+                    <h3>Numbers 1-3</h3>
+                    <p>1: Leadership, independence, originality<br>
+                       2: Cooperation, diplomacy, sensitivity<br>
+                       3: Creativity, expression, joy</p>
+                </div>
+                <div class="number-info">
+                    <h3>Numbers 4-6</h3>
+                    <p>4: Stability, organization, dedication<br>
+                       5: Freedom, adventure, change<br>
+                       6: Harmony, responsibility, love</p>
+                </div>
+                <div class="number-info">
+                    <h3>Numbers 7-9</h3>
+                    <p>7: Wisdom, spirituality, analysis<br>
+                       8: Power, abundance, success<br>
+                       9: Compassion, completion, service</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>For more detailed numerology readings, visit our partner site <a href="https://numerologychecker.com" target="_blank" rel="noopener noreferrer">numerologychecker.com</a></p>
+    </footer>
+
+    <script>
+        function calculateNumbers(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const birthdate = document.getElementById('birthdate').value;
+
+            const lifePathNumber = calculateLifePath(birthdate);
+            const destinyNumber = calculateDestiny(name);
+            const soulUrgeNumber = calculateSoulUrge(name);
+
+            displayResults(lifePathNumber, destinyNumber, soulUrgeNumber);
+        }
+
+        function calculateLifePath(birthdate) {
+            const date = new Date(birthdate);
+            const day = date.getDate();
+            const month = date.getMonth() + 1;
+            const year = date.getFullYear();
+
+            return reduceToSingleDigit(reduceToSingleDigit(day) + 
+                                     reduceToSingleDigit(month) + 
+                                     reduceToSingleDigit(year));
+        }
+
+        function calculateDestiny(name) {
+            const numerologyValues = {
+                'a': 1, 'j': 1, 's': 1,
+                'b': 2, 'k': 2, 't': 2,
+                'c': 3, 'l': 3, 'u': 3,
+                'd': 4, 'm': 4, 'v': 4,
+                'e': 5, 'n': 5, 'w': 5,
+                'f': 6, 'o': 6, 'x': 6,
+                'g': 7, 'p': 7, 'y': 7,
+                'h': 8, 'q': 8, 'z': 8,
+                'i': 9, 'r': 9
+            };
+
+            return calculateNumberFromName(name, numerologyValues);
+        }
+
+        function calculateSoulUrge(name) {
+            const vowels = {'a': 1, 'e': 5, 'i': 9, 'o': 6, 'u': 3};
+            return calculateNumberFromName(name, vowels);
+        }
+
+        function calculateNumberFromName(name, values) {
+            const cleanName = name.toLowerCase().replace(/[^a-z]/g, '');
+            let sum = 0;
+            for (let char of cleanName) {
+                sum += values[char] || 0;
+            }
+            return reduceToSingleDigit(sum);
+        }
+
+        function reduceToSingleDigit(number) {
+            if (number <= 9) return number;
+            if (number === 11 || number === 22) return number; // Master numbers
+            return reduceToSingleDigit(String(number).split('').reduce((a, b) => Number(a) + Number(b), 0));
+        }
+
+        function displayResults(lifePathNumber, destinyNumber, soulUrgeNumber) {
+            const meanings = {
+                1: "Natural born leader, independent, ambitious, creative",
+                2: "Cooperative, diplomatic, sensitive, peacemaker",
+                3: "Creative, expressive, optimistic, communicator",
+                4: "Practical, trustworthy, hard-working, builder",
+                5: "Adventurous, freedom-loving, versatile, explorer",
+                6: "Nurturing, responsible, loving, harmonious",
+                7: "Analytical, spiritual, intellectual, seeker",
+                8: "Successful, material-focused, powerful, achiever",
+                9: "Humanitarian, compassionate, artistic, healer",
+                11: "Master Number - Intuitive, inspirational, spiritual teacher",
+                22: "Master Number - Master builder, practical idealist, leader"
+            };
+
+            document.getElementById('lifePathResult').innerHTML = `
+                <div class="number-title">Life Path Number: ${lifePathNumber}</div>
+                <p>${meanings[lifePathNumber]}</p>
+            `;
+
+            document.getElementById('destinyResult').innerHTML = `
+                <div class="number-title">Destiny Number: ${destinyNumber}</div>
+                <p>${meanings[destinyNumber]}</p>
+            `;
+
+            document.getElementById('soulUrgeResult').innerHTML = `
+                <div class="number-title">Soul Urge Number: ${soulUrgeNumber}</div>
+                <p>${meanings[soulUrgeNumber]}</p>
+            `;
+
+            document.getElementById('results').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
