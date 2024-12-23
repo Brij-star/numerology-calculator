@@ -4,6 +4,9 @@ Welcome to the **Numerology Calculator**! This project helps users calculate the
 
 ## 🌐 Live Demo
 Check out the live website here: [Numerology Calculator](https://brij-star.github.io/numerology-calculator/)
+Check out the live website Numerology Checker:  
+👉 [NumerologyChecker.com](https://numerologychecker.com)
+
 
 ---
 
