@@ -3,7 +3,7 @@
 Welcome to the **Numerology Calculator**! This project helps users calculate their numerology numbers, including Life Path, Expression, and more, using their birth date and name.
 
 ## 🌐 Live Demo
-Check out the live website here: 👉 [NumerologyChecker.com](https://numerologychecker.com) or [Numerology Calculator](https://brij-star.github.io/numerology-calculator/)
+Check out the live website here: 👉 [NumerologyChecker.com](https://numerologychecker.com) or [Numerology Calculator](https://brij-star.github.io/numerology-calculator/).
 
 
 
