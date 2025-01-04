@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Chaldean Numerology Calculator</title>
+    <meta name="description" content="Discover the ancient wisdom of Chaldean numerology with our free calculator. Uncover deep insights into your personality, life path, and destiny based on your name and birth date.">
+    <meta name="keywords" content="Chaldean Numerology Calculator, Ancient Numerology, Free Numerology, Life Path Number, Destiny Number, Name Analysis, Birth Date Numerology">
+    <meta name="author" content="Brijesh Verma">
+    <link rel="canonical" href="https://brij-star.github.io/numerology-calculator/chaldean-numerology-calculator">
+    <meta property="og:title" content="Free Chaldean Numerology Calculator - Unlock Ancient Wisdom">
+    <meta property="og:description" content="Explore the depths of your personality and life path with our Chaldean Numerology Calculator. Gain insights based on ancient wisdom, tailored to your name and birth date.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brij-star.github.io/numerology-calculator/chaldean-numerology-calculator">
+    <meta name="twitter:title" content="Free Chaldean Numerology Calculator - Unlock Ancient Wisdom">
+    <meta name="twitter:description" content="Dive into the world of Chaldean numerology. Discover your life path, destiny, and personality traits with our easy-to-use calculator.">
+    <link rel="stylesheet" href="numerology-name.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Chaldean Numerology Calculator</h1>
+            <p>Unlock the ancient wisdom of Chaldean numerology and discover profound insights about your life path, destiny, and personality.</p>
+        </div>
+    </header>
+    <main class="container">
+        <section class="hero">
+            <h2>Calculate Your Chaldean Numerology</h2>
+            <form id="numerologyForm">
+                <input type="text" id="name" placeholder="Enter your full name" required>
+                <input type="date" id="birthdate" required>
+                <button type="submit">Calculate</button>
+            </form>
+            <div id="result"></div>
+        </section>
+        <section class="content">
+            <h2>About Chaldean Numerology Calculator</h2>
+            <p><b>Introduction:</b> Welcome to our Chaldean Numerology Calculator! Dive into the ancient wisdom of one of the oldest and most accurate forms of numerology. Chaldean numerology, originating from ancient Babylon, offers deep insights into your personality, life path, and destiny.</p>
+
+            <h2>What is Chaldean Numerology?</h2>
+            <p>Chaldean numerology is an ancient system that assigns numerical values to letters based on their vibrational essence. Unlike other systems, it uses numbers 1 through 8, with 9 considered sacred and used separately. This system is believed to be more accurate and mystical, offering profound insights into one's life and character.</p>
+
+            <h2>How to Use the Chaldean Numerology Calculator</h2>
+            <ol>
+                <li><strong>Enter Your Full Name:</strong> Type your full name as it appears on your birth certificate.</li>
+                <li><strong>Enter Your Birth Date:</strong> Select your date of birth from the calendar.</li>
+                <li><strong>Click Calculate:</strong> Hit the "Calculate" button to reveal your Chaldean numerology results.</li>
+                <li><strong>Interpret Results:</strong> Read through the detailed interpretation provided for insights into your numbers' meanings.</li>
+            </ol>
+
+            <h2>Understanding Your Chaldean Numerology Results</h2>
+            <p>Your Chaldean numerology calculation will provide insights into:</p>
+            <ul>
+                <li><strong>Destiny Number:</strong> Derived from your full name, it reveals your life's purpose and the traits you're meant to develop.</li>
+                <li><strong>Life Path Number:</strong> Calculated from your birth date, it indicates the journey and experiences you're likely to encounter in life.</li>
+                <li><strong>Soul Urge Number:</strong> Based on the vowels in your name, it reveals your inner desires and motivations.</li>
+                <li><strong>Personality Number:</strong> Derived from the consonants in your name, it shows how others perceive you.</li>
+            </ul>
+
+            <h2>The Significance of Numbers in Chaldean Numerology</h2>
+            <p>In Chaldean numerology, each number carries unique vibrations and meanings:</p>
+            <ul>
+                <li><strong>1:</strong> Leadership, individuality, new beginnings</li>
+                <li><strong>2:</strong> Cooperation, diplomacy, sensitivity</li>
+                <li><strong>3:</strong> Self-expression, creativity, joy</li>
+                <li><strong>4:</strong> Stability, hard work, practicality</li>
+                <li><strong>5:</strong> Change, freedom, adventure</li>
+                <li><strong>6:</strong> Harmony, responsibility, love</li>
+                <li><strong>7:</strong> Spirituality, introspection, mysticism</li>
+                <li><strong>8:</strong> Power, authority, material success</li>
+                <li><strong>9:</strong> (Used separately) Completion, humanitarianism, wisdom</li>
+            </ul>
+
+            <h2>Why Chaldean Numerology Matters</h2>
+            <p>Understanding your Chaldean numerology can:</p>
+            <ul>
+                <li>Provide deeper insights into your personality and life purpose</li>
+                <li>Help you understand your strengths and potential challenges</li>
+                <li>Guide you in making important life decisions</li>
+                <li>Offer a unique perspective on your relationships and compatibility with others</li>
+                <li>Enhance your spiritual and personal growth journey</li>
+            </ul>
+
+            <h2>Chaldean vs. Pythagorean Numerology</h2>
+            <p>While both systems offer valuable insights, Chaldean numerology is often considered more mystical and accurate. Key differences include:</p>
+            <ul>
+                <li>Chaldean uses numbers 1-8, with 9 as a sacred number, while Pythagorean uses 1-9</li>
+                <li>Chaldean assigns numbers based on vibration, not alphabetical order</li>
+                <li>Chaldean is thought to be more intuitive and less systematic than Pythagorean</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+            <p>Chaldean numerology offers a unique window into your inner self and life path. While it can provide fascinating insights, remember that it's one of many tools for self-discovery. Use the information as a starting point for reflection and personal growth, always balancing it with your own experiences and intuition.</p>
+
+            <p>Ready to uncover the ancient wisdom hidden in your name and birth date? Enter your details above and embark on your Chaldean numerology journey today!</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Chaldean Numerology Calculator. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('numerologyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const birthdate = document.getElementById('birthdate').value;
+            const results = calculateChaldeanNumerology(name, birthdate);
+            displayResult(results);
+        });
+
+        function calculateChaldeanNumerology(name, birthdate) {
+            const chaldeanValues = {
+                'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 8, 'g': 3, 'h': 5, 'i': 1, 'j': 1, 'k': 2, 'l': 3,
+                'm': 4, 'n': 5, 'o': 7, 'p': 8, 'q': 1, 'r': 2, 's': 3, 't': 4, 'u': 6, 'v': 6, 'w': 6, 'x': 5,
+                'y': 1, 'z': 7
+            };
+
+            function sumDigits(num) {
+                return num.toString().split('').reduce((sum, digit) => sum + parseInt(digit), 0);
+            }
+
+            function calculateNameNumber(name) {
+                return name.toLowerCase().split('').reduce((sum, char) => {
+                    return sum + (chaldeanValues[char] || 0);
+                }, 0);
+            }
+
+            const destinyNumber = calculateNameNumber(name);
+            const [year, month, day] = birthdate.split('-').map(Number);
+            const lifePath = sumDigits(sumDigits(year) + sumDigits(month) + sumDigits(day));
+            
+            const vowels = name.toLowerCase().match(/[aeiou]/g) || [];
+            const soulUrge = vowels.reduce((sum, vowel) => sum + chaldeanValues[vowel], 0);
+            
+            const consonants = name.toLowerCase().match(/[bcdfghjklmnpqrstvwxyz]/g) || [];
+            const personality = consonants.reduce((sum, consonant) => sum + chaldeanValues[consonant], 0);
+
+            return {
+                destinyNumber: destinyNumber > 9 ? sumDigits(destinyNumber) : destinyNumber,
+                lifePath: lifePath > 9 ? sumDigits(lifePath) : lifePath,
+                soulUrge: soulUrge > 9 ? sumDigits(soulUrge) : soulUrge,
+                personality: personality > 9 ? sumDigits(personality) : personality
+            };
+        }
+
+        function displayResult(results) {
+            const resultDiv = document.getElementById('result');
+            const interpretations = {
+                1: "The number of leadership and new beginnings. You're independent, creative, and original in your approach to life.",
+                2: "The number of cooperation and balance. You excel in partnerships and have a natural diplomatic ability.",
+                3: "The number of self-expression and creativity. You have a gift for communication and bringing joy to others.",
+                4: "The number of stability and hard work. You're practical, reliable, and have a strong sense of discipline.",
+                5: "The number of freedom and change. You're adaptable, versatile, and thrive on new experiences.",
+                6: "The number of harmony and responsibility. You have a nurturing nature and excel in creating balance in your environment.",
+                7: "The number of spiritual wisdom and analysis. You have a deep, introspective nature and a thirst for knowledge.",
+                8: "The number of personal power and material success. You have strong leadership qualities and the potential for great achievements."
+            };
+
+            resultDiv.innerHTML = `
+                <h3>Your Chaldean Numerology Results</h3>
+                <div class="interpretation">
+                    <h4>Destiny Number: ${results.destinyNumber}</h4>
+                    <p>${interpretations[results.destinyNumber]}</p>
+                    <h4>Life Path Number: ${results.lifePath}</h4>
+                    <p>${interpretations[results.lifePath]}</p>
+                    <h4>Soul Urge Number: ${results.soulUrge}</h4>
+                    <p>${interpretations[results.soulUrge]}</p>
+                    <h4>Personality Number: ${results.personality}</h4>
+                    <p>${interpretations[results.personality]}</p>
+                </div>
+                <h4>What These Numbers Mean For You:</h4>
+                <ul>
+                    <li><strong>Destiny Number:</strong> Reveals your life's purpose and the traits you're meant to develop.</li>
+                    <li><strong>Life Path Number:</strong> Indicates the journey and experiences you're likely to encounter in life.</li>
+                    <li><strong>Soul Urge Number:</strong> Unveils your inner desires and motivations.</li>
+                    <li><strong>Personality Number:</strong> Shows how others perceive you and your outward behavior.</li>
+                </ul>
+                <p>Remember, Chaldean numerology offers profound insights, but it's one of many tools for self-discovery. Use these insights for reflection and personal growth, always balancing them with your own experiences and intuition.</p>
+            `;
+            resultDiv.style.display = 'block';
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
+
